@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Encerramento do Ano Letivo — Portfólio de Redações</title>
+  <meta name="description" content="Portfólio com 14 redações sobre Encerramento do Ano Letivo. Gerencie, visualize e exporte suas redações." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Início — Encerramento do Ano Letivo">
+        <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="8" fill="#e6eefc"/></svg>
+        <div>
+          <strong>Encerramento</strong>
+          <small>Portfólio de Redações</small>
+        </div>
+      </a>
+
+      <div class="header-controls">
+        <div class="search-wrap">
+          <input id="global-search" type="search" placeholder="Procurar títulos ou palavras..." aria-label="Pesquisar redações"/>
+          <button id="search-clear" title="Limpar busca" aria-label="Limpar busca">✕</button>
+        </div>
+
+        <button id="btn-menu" class="hamburger" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav id="main-nav" class="nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="redacoes.html">Redações (14)</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#estatisticas">Estatísticas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>Encerramento do Ano Letivo</h1>
+        <p class="lead">Coleção de <strong id="count-animated">14</strong> redações criadas ao longo do ano. Organize, visualize, exporte e imprima cada redação — tudo offline.</p>
+        <div class="hero-actions">
+          <a class="btn" href="redacoes.html">Abrir redações</a>
+          <button class="btn btn-ghost" id="open-gallery">Ver galeria</button>
+        </div>
+
+        <div class="meta-cards">
+          <div class="meta">
+            <h3 id="meta-total">14</h3>
+            <p>Total de redações</p>
+          </div>
+          <div class="meta">
+            <h3 id="meta-first-date">13/09</h3>
+            <p>Primeira redação</p>
+          </div>
+          <div class="meta">
+            <h3 id="meta-latest-date">13/11</h3>
+            <p>Última redação</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Destaque visual / cartão -->
+        <div class="card highlight">
+          <h4>Despedida</h4>
+<p>
+  Encerrar o 3º ano é muito mais do que terminar uma etapa escolar: é fechar um capítulo cheio de histórias, desafios, aprendizados e amizades que vamos levar para a vida inteira. Cada prova difícil, cada risada no intervalo, cada projeto feito às pressas — tudo isso virou memória, virou parte de quem nos tornamos.
+</p><p>
+  Agora seguimos em frente, com aquele misto de saudade e ansiedade pelo futuro. Que venham novos caminhos, novas conquistas e novos sonhos. E que tudo o que vivemos até aqui continue sendo nossa base para ir ainda mais longe.
+</p>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria com slideshow + lightbox -->
+    <section id="galeria" class="container gallery-section">
+      <h2>Momentos</h2>
+      <p class="small">Clique para ampliar</p>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- imagens (coloque na pasta /img) -->
+        <figure class="gallery-item"><img src="img/photo1.jpg" alt="Sala decorada para encerramento" data-full="img/photo1.jpg"><figcaption></figcaption></figure>
+        <figure class="gallery-item"><img src="img/photo2.jpg" alt="Entrega de certificados" data-full="img/photo2.jpg"><figcaption>Chris</figcaption></figure>
+        <figure class="gallery-item"><img src="img/photo3.jpg" alt="Cartazes de fim de ano" data-full="img/photo3.jpg"><figcaption>Friends</figcaption></figure>
+        <figure class="gallery-item"><img src="img/photo4.jpg" alt="Turma reunida para foto" data-full="img/photo4.jpg"><figcaption>Friends</figcaption></figure>
+        <figure class="gallery-item"><img src="img/photo5.jpg" alt="Atividades finais" data-full="img/photo5.jpg"><figcaption>Friends</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Lightbox (hidden until open) -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de imagens">
+      <button class="lb-close" aria-label="Fechar">✕</button>
+      <button class="lb-prev" aria-label="Imagem anterior">‹</button>
+      <div class="lb-content"><img src="" alt=""></div>
+      <button class="lb-next" aria-label="Próxima imagem">›</button>
+    </div>
+
+    <!-- Estatísticas / filtros -->
+    <section id="estatisticas" class="container stats-section">
+      <h2>Estatísticas & Filtros</h2>
+      <div class="filters-grid">
+        <div>
+          <label>Filtrar por ano (início):</label>
+          <input type="date" id="filter-start" />
+        </div>
+        <div>
+          <label>Filtrar por ano (fim):</label>
+          <input type="date" id="filter-end" />
+        </div>
+        <div>
+          <label>Ordenar por:</label>
+          <select id="sort-by">
+            <option value="date-desc">Data (mais recente)</option>
+            <option value="date-asc">Data (mais antiga)</option>
+            <option value="title-asc">Título (A → Z)</option>
+            <option value="title-desc">Título (Z → A)</option>
+          </select>
+        </div>
+        <div>
+          <label>Exportar resumo:</label>
+          <button id="export-summary" class="btn">Exportar CSV</button>
+        </div>
+      </div>
+      <small class="small">Filtros aplicam-se à listagem de redações (página Redações).</small>
+    </section>
+
+  </main>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> — Portfólio de Redações (Encerramento do Ano Letivo)</div>
+      <nav><a href="redacoes.html">Redações</a> · <a href="#galeria">Galeria</a></nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/redacoes-data.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
